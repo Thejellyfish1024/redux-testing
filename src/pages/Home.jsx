@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment, incrementByValue } from "../redux/features/counter/counterSlice";
+import { decrement, decrementByValue, increment, incrementByValue } from "../redux/features/counter/counterSlice";
 
 
 const Home = () => {
@@ -30,6 +30,13 @@ const Home = () => {
                     onClick={() => dispatch(incrementByValue(5))}
                 >
                     increase by 5
+                </button>
+                <br />
+                <button
+                    aria-label="Decrement value"
+                    onClick={() => dispatch(decrementByValue(5))}
+                >
+                    decrease by 5
                 </button>
             </div>
         </div>
